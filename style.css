@@ -6,24 +6,24 @@
 
 section {
   height: 100vh;
-  background-color: rgb(39, 41, 68);
-  font-family: sans-serif;
+  background-color: rgb(30, 37, 126);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .score {
-  color: rgb(224, 224, 224);
-  height: 40vh;
+  color: rgb(255, 255, 255);
+  height: 30vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 .score h2 {
-  font-size: 60px;
+  font-size: 80px;
 }
 .score p {
   text-align: center;
   padding: 10px;
-  font-size: 40px;
+  font-size: 65px;
 }
 
 .intro {
@@ -37,17 +37,20 @@ section {
 }
 
 .intro h1 {
-  font-size: 78px;
+  font-size: 80px;
 }
 .intro button,
 .match button {
-  width: 200px;
-  height: 80px;
+  width: 250px;
+  height: 110px;
   background: none;
   border: none;
+  margin: 4px;
   color: rgb(224, 224, 224);
   font-size: 50px;
-  background: rgb(45, 117, 96);
+  background: rgb(7, 165, 34);
+  border: 2px solid blue;
+  box-shadow: blueviolet;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -62,7 +65,10 @@ section {
 .winner {
   color: rgb(224, 224, 224);
   text-align: center;
-  font-size: 50px;
+  font-size: 70px;
+}
+.head{
+  font-family: cursive;
 }
 
 .hands,
@@ -146,7 +152,7 @@ div.fadeIn {
   }
 }
 
-@media (min-width: 1024px)/*or anything else you what this to show/hide*/{
+@media (min-width: 1024px,min-he)/*or anything else you what this to show/hide*/{
   .respoonsive-on{
   text-decoration: none;
   display: block;
