@@ -1,3 +1,8 @@
+var winning = new Audio('winning.mp3');
+var losing = new Audio('losing.mp3');
+var opening = new Audio('opening.mp3');
+
+
 const game = () => {
   let pScore = 0;
   let cScore = 0;
@@ -7,6 +12,7 @@ const game = () => {
     const playBtn = document.querySelector(".intro button");
     const introScreen = document.querySelector(".intro");
     const match = document.querySelector(".match");
+    opening.play();
 
     playBtn.addEventListener("click", () => {
       introScreen.classList.add("fadeOut");
@@ -67,11 +73,13 @@ const game = () => {
     if (playerChoice === "rock") {
       if (computerChoice === "scissors") {
         winner.textContent = "Player Wins";
+        winning.play();
         pScore++;
         updateScore();
         return;
       } else {
         winner.textContent = "Computer Wins";
+        losing.play();
         cScore++;
         updateScore();
         return;
@@ -81,11 +89,13 @@ const game = () => {
     if (playerChoice === "paper") {
       if (computerChoice === "scissors") {
         winner.textContent = "Computer Wins";
+        losing.play();
         cScore++;
         updateScore();
         return;
       } else {
         winner.textContent = "Player Wins";
+        winning.play();
         pScore++;
         updateScore();
         return;
@@ -95,11 +105,13 @@ const game = () => {
     if (playerChoice === "scissors") {
       if (computerChoice === "rock") {
         winner.textContent = "Computer Wins";
+        losing.play();
         cScore++;
         updateScore();
         return;
       } else {
         winner.textContent = "Player Wins";
+        winning.play();
         pScore++;
         updateScore();
         return;
